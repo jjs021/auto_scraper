@@ -16,7 +16,7 @@ jobs:
       - name: Install the necessary libraries
         run: pip install requests beautifulsoup4 pandas
       - name: Run our scraping script
-        run: python scraper.py
+        run: python FedRearch_scraping_homework.py
       - name: Commit and push if content changed
         run: |-
           git config user.name "Automated"
