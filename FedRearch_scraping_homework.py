@@ -1,28 +1,28 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[62]:
+# In[133]:
 
 
 import requests
 r = requests.get('https://www.newyorkfed.org/research')
 
 
-# In[63]:
+# In[134]:
 
 
 # print the first 500 characters of the HTML
 print(r.text[0:100])
 
 
-# In[64]:
+# In[135]:
 
 
 from bs4 import BeautifulSoup
-doc = BeautifulSoup(r.text, 'html.parser')
+soup = BeautifulSoup(r.text, 'html.parser')
 
 
-# In[65]:
+# In[136]:
 
 
 results = soup.find_all(attrs={"class":("ts-story-headline","ts-story-text")})
